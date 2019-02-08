@@ -253,9 +253,27 @@ view.presenter = presenter
 PlaygroundPage.current.liveView = view
 ```
 
+> MVC와의 차별화를 둔 MVP
 
+MVC와 다르게 MVP의 경우에는 View의 Life Cycle의 영향과 레이아웃 코드와 액션 코드가 서로 분리될 수 있다. 또한 View 와 Model 경우 의존성이 존재 하지 않는것도 유지된다. 대신에 View와 Presenter가 1:1로 강한 의존성을 가지게 된다. 
 
+위의 예제에 `GreetingViewController`의 경우 레이아웃과 유저의 액션을 전달하는 코드만 존재한다.
+1. View가 사용자 입력을 받는다.
+2. View는 Presenter에 작업을 요청한다.
+    - View는 Presenter를 소유 하고 있다
+    (View는 Presenter를 강한 참조로 소유하고 있고 Presenter는 약한 참조로 View를 단순 가르키고 있다)
+3. Presenter에서 필요한 데이터를 Model에 요청 한다.
+4. Model은 Presenter에 필요한 데이터를 응답한다.
+5. Presenter는 View에 데이터를 응답한다.
+6. View는 Presenter로 부터 받은 데이터로 화면에 보여준다.
 
+> MVP 아키텍쳐의 3가지 키워드 부합성
+
+- **Distribution** : 기존의 MVC에서 발생하는 Model과 View의 의존성 문제는 해결 가능하지만 참조에의하 View와 Controller의 의존성이 완화 되어있다.
+- **Testability** : Model 뿐만 아니라 다른 요소들 또한 독립적을 테스팅이 용이하다.
+- **Easy of Use** : Presenter의 추가와 각각의 View, Presenter의 부가저인 Protocol의 구현으로 코드의 길이가 길어지고 가독성을 위한 코드정렬작업이 필요
+
+<hr>
 
 
 
