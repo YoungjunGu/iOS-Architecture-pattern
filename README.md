@@ -271,11 +271,11 @@ MVC와 다르게 MVP의 경우에는 View의 Life Cycle의 영향과 레이아�
 
 - **Distribution** : 기존의 MVC에서 발생하는 Model과 View의 의존성 문제는 해결 가능하지만 참조에의하 View와 Controller의 의존성이 완화 되어있다.
 - **Testability** : Model 뿐만 아니라 다른 요소들 또한 독립적을 테스팅이 용이하다.
-- **Easy of Use** : Presenter의 추가와 각각의 View, Presenter의 부가저인 Protocol의 구현으로 코드의 길이가 길어지고 가독성을 위한 코드정렬작업이 필요
+- **Easy of Use** : Presenter의 추가와 각각의 View, Presenter의 부가적인 Protocol의 구현으로 코드의 길이가 길어지고 가독성을 위한 코드정렬작업이 필요
 
 <hr>
 
-
+## MVVM
 
 
 
